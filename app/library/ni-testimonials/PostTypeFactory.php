@@ -36,6 +36,7 @@ class NI_Testimonials_PostTypeFactory {
                     'not_found' => 'No Testimonials Found',
                     'not_found_in_trash' => 'No Testimonials Found in the bin' ),
             'taxonomies' => array( 'type' ), 
+            'menu_icon' => NI_Testimonials_Registry::get( 'config', 'plugin_uri' ) . 'public/imgs/icon.png', 
             'public' => true,
             'rewrite' => array( 
                     'with_front' => false
