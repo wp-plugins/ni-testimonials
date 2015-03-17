@@ -1,0 +1,84 @@
+<script>
+
+    jQuery( document ).ready( function( $ ) {
+
+        var totalSliders = $( '.my-testimonial:not(#my-testimonial-hidden)' ).length;
+
+        var currentSlider = 1;
+        var nextSlider = 2;
+
+        var toFadeIn = null;
+        var toFadeOut = null;
+        
+        function slideShow() {
+
+            if( currentSlider === totalSliders ) { 
+
+                nextSlider = 1;
+
+                toFadeOut = $( '#my-testimonial-' + currentSlider );
+                toFadeIn = $( '#my-testimonial-' + nextSlider );
+                
+                currentSlider = 1;
+                nextSlider = 2;
+
+            } else {
+
+                toFadeOut = $( '#my-testimonial-' + currentSlider );
+                toFadeIn = $( '#my-testimonial-' + nextSlider );   
+
+                currentSlider++;
+                nextSlider++;
+
+            }
+            
+            $( '.my-testimonials-container' ).css( 'height', toFadeIn.height() );
+            
+            toFadeOut.fadeOut();
+            toFadeIn.fadeIn();
+
+        }
+
+        setInterval( slideShow, 4000 );
+
+    });
+    
+</script>
+
+        
+<div class="my-testimonials-container">
+    
+    <?php
+    
+     $posts_args = array( 'posts_per_page' => -1, 'post_type' => 'testimonials' ); 
+     
+     if( isset( $data['include'] ) ) $posts_args['include'] = $data['include'];
+     if( isset( $data['type'] ) )  $posts_args['type'] = $data['type'];
+     
+     $posts = get_posts( $posts_args );
+    
+     $i = 1;
+
+    foreach( $posts as $post ) : ?>
+
+        <div class="my-testimonial" id="my-testimonial-<?php echo $i; ?>">
+
+            <?php echo $post->post_content; ?>
+            
+            <div class="testimonials-author"><?php echo $post->post_title; ?></div>
+            
+        </div>
+    
+        <?php $i++; ?>
+    
+    <?php endforeach; ?>
+
+    <div class="my-testimonial" id="my-testimonial-hidden">
+
+        <?php echo $posts{0}->post_content; ?>
+        
+        <div class="testimonials-author"><?php echo $post->post_title; ?></div>
+
+    </div>
+    
+</div>
