@@ -14,7 +14,7 @@
 $config = array( 
     
     
-    'current_version' => 1.0,
+    'current_version' => 1.1,
     
     'is_beta' => false,
        
