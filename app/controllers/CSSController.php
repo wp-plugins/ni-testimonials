@@ -33,7 +33,7 @@ class NI_Testimonials_CSSController extends NI_Testimonials_BaseController {
         echo '    
                 <style>
 
-                    .my-testimonials-container
+                    .ni-testimonials-container
                     {
                         width: 100%;
                         position: relative;
@@ -41,7 +41,7 @@ class NI_Testimonials_CSSController extends NI_Testimonials_BaseController {
                         transition: 0.7s all;
                     }
 
-                    .my-testimonials-container .my-testimonial
+                    .ni-testimonials-container .ni-testimonial
                     {
                         position: absolute;
                         top: 0px;
@@ -50,19 +50,19 @@ class NI_Testimonials_CSSController extends NI_Testimonials_BaseController {
                         display: none;
                     }
 
-                    .my-testimonials-container .my-testimonial h4
+                    .ni-testimonials-container .ni-testimonial h4
                     {
                         font-weight: bold;
                         margin: 10px 0px;
                     }
 
-                    .my-testimonial#my-testimonial-hidden,
-                    .my-testimonial#my-testimonial-1
+                    .ni-testimonial#ni-testimonial-hidden,
+                    .ni-testimonial#ni-testimonial-1
                     {
                         display: block;
                     }
 
-                    .my-testimonial#my-testimonial-hidden
+                    .ni-testimonial#ni-testimonial-hidden
                     {
                         visibility: hidden;
                         position: relative;

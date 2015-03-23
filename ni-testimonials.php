@@ -4,7 +4,7 @@
 Plugin Name: NI Testimonials
 Plugin URI: http://www.networkintellect.com
 Description: Very simple Testimonials Plugin Created By Peter Featherstone @ Network Intellect
-Version: 1.0
+Version: 1.1
 Author: Peter Featherstone
 Text Domain: ni-testimonials
 Author URI: http://www.peterfeatherstone.com

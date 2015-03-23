@@ -3,7 +3,7 @@ Contributors: peter.featherstone, networkintellect
 Tags: ni testimonials, ni testimonial, testimonial, testimonials, ni
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,9 @@ You are of course more than welcome to use it however if you wish and it fulfils
 
 It currently supports the following shortcode with options:
 
-[ni-testimonials] - Shows all testimonials with all types
+[ni-testimonials-list] - Shows all testimonials in a list with all types
+
+[ni-testimonials] - Shows all testimonials in a carousel with all types
 
 [ni-testimonials type=""] - Enables you to specify which type of testimonial to show - e.g home-page
 
@@ -44,6 +46,11 @@ Alternatively:
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1 (23rd Mar 2015) =
+
+* Changed CSS classes to ni-testimonials
+* Added [ni-testimonials-list] shortcode for listing all testimonials with pagination
 
 = 1.0 (10th Dec 2014) =
 

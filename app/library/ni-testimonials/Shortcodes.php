@@ -15,6 +15,7 @@ class NI_Testimonials_Shortcodes {
         
         
         add_shortcode( 'ni-testimonials', array( &$this, 'testimonials' ) );
+        add_shortcode( 'ni-testimonials-list', array( &$this, 'testimonialsList' ) );
         
         
     }
@@ -31,6 +32,22 @@ class NI_Testimonials_Shortcodes {
         
         
         return NI_Testimonials_View::make( 'testimonials', $args );
+        
+        
+    }
+    
+    /**
+     * Return the appropriate view for our testimonial
+     *
+     * @param  array  $args
+     * @return view
+     * @added 1.0
+     */
+    
+    public function testimonialsList( $args ) {
+        
+        
+        return NI_Testimonials_View::make( 'testimonials-list', $args );
         
         
     }
