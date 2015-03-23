@@ -1,0 +1,32 @@
+<div class="ni-testimonials-list-container">
+    
+    <?php
+     
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    $posts_args = array( 'posts_per_page' => 10, 'post_type' => 'testimonials', 'paged' => $paged ); 
+
+    $posts = new WP_Query( $posts_args );
+
+    if( $posts->have_posts() ) : 
+            
+        while( $posts->have_posts() ) : $posts->the_post(); ?>
+
+            <div class="ni-testimonials-list-item">
+
+                <div class="ni-testimonials-list-author"><?php the_title(); ?></div>
+                <div class="ni-testimonials-list-content"><?php the_content(); ?></div>
+
+            </div>
+
+        <?php endwhile; ?>
+
+        <div class="ni-testimonials-prev"><?php next_posts_link( '&laquo; Older Testimonials', $posts->max_num_pages ) ?></div>
+        <div class="ni-testimonials-next"><?php previous_posts_link( 'Newer Testimonials &raquo;' ) ?></div>
+    
+    <?php else : ?>
+    
+        There are currently no testimonials to show.
+        
+    <?php endif; ?>
+        
+</div>
