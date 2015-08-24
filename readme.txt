@@ -1,17 +1,17 @@
 === NI Testimonials ===
-Contributors: peter.featherstone, networkintellect
+Contributors: networkintellect
 Tags: ni testimonials, ni testimonial, testimonial, testimonials, ni
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.3
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple Testimonials Plugin Created By Peter Featherstone @ Network Intellect
+Very simple Testimonials Plugin Created By Network Intellect
 
 == Description ==
 
-Very simple Testimonials Plugin Created By Peter Featherstone @ Network Intellect
+Very simple Testimonials Plugin Created By Network Intellect
 
 Please note that I have created this plugin as a personal project to use across various sites that I make, therefore there will be no custom support or feature requests in regards this plugin.
 
